@@ -1,12 +1,37 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
+export const useData1Store = defineStore('data1', {
+  state: () => {
+    return {
+      name: 'Tentacle Sister',
+      shengao: '175',
+      tizhong: '45',
+      age: '20',
+    }
+  },
+  getters: {
+    getCompany() {
+      return (key) => {
+        switch (key) {
+          case 'shengao':
+            //语句
+            return 'cm'
 
-  return { count, doubleCount, increment }
+          case 'tizhong':
+            //语句
+            return 'kg'
+
+          case 'age':
+            //语句
+            return '岁'
+
+          default: //可选
+            return ''
+        }
+      }
+    }
+  },
+  actions: {
+
+  }
 })
