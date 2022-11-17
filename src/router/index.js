@@ -1,21 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
-      path: '/',
-      redirect:'/images',
-    },
-    {
       path: '/home',
-      name: 'home',
+      name: 'Home',
       component: () => import('../views/HomeView.vue')
     },
     {
       path: '/images',
-      name: 'images',
+      name: 'Images',
       component: () => import('../views/ImagesView.vue')
     }
   ]
