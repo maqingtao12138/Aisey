@@ -6,12 +6,17 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect:'/home',
+      redirect:'/images',
     },
     {
       path: '/home',
       name: 'home',
       component: () => import('../views/HomeView.vue')
+    },
+    {
+      path: '/images',
+      name: 'images',
+      component: () => import('../views/ImagesView.vue')
     }
   ]
 })

@@ -1,8 +1,10 @@
 <template>
-  <div>{{ name }}</div>
-  <div>{{ age }}{{ data1.getCompany("age") }}</div>
-  <div>{{ shengao }}{{ data1.getCompany("shengao") }}</div>
-  <div>{{ tizhong }}{{ data1.getCompany("tizhong") }}</div>
+  <div>
+    <div>{{ name }}</div>
+    <div>{{ age }}{{ data1.getCompany("age") }}</div>
+    <div>{{ shengao }}{{ data1.getCompany("shengao") }}</div>
+    <div>{{ tizhong }}{{ data1.getCompany("tizhong") }}</div>
+  </div>
 </template>
 <script setup>
 import { useData1Store } from "@/stores/counter";
