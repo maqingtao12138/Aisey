@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
-
+import Tentacle from '../assets/Tentacle Lady.png'
 export const useData1Store = defineStore('data1', {
   state: () => {
     return {
-      name: 'Tentacle Sister',
+      name: 'Tentacle Lady',
       shengao: '175',
       tizhong: '45',
       age: '20',
+      photo: Tentacle,
     }
   },
   getters: {
