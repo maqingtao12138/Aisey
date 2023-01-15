@@ -17,6 +17,11 @@ const router = createRouter({
       path: '/images',
       name: 'Images',
       component: () => import('../views/ImagesView.vue')
+    },
+    {
+      path: '/message',
+      name: 'Message',
+      component: () => import('../views/MessageView.vue')
     }
   ]
 })
