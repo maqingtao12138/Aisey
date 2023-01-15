@@ -12,6 +12,7 @@ import { reactive, ref } from "vue";
 const messagelist = reactive([]);
 const inputEle = ref("");
 const username = prompt("请输入昵称") || '游客';
+// websocket
 const ws = new WebSocket(`ws://localhost:9911?username=${username}`);
 function sendMessage() {
   ws.send(JSON.stringify(inputEle.value));
